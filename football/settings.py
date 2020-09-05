@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '2r82kb0$kw7_#+p)&r$8g^8s)+k0lf(60ismn0shad&y3&7+b1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['geany-football-live.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
