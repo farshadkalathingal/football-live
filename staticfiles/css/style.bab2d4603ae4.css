@@ -1,0 +1,77 @@
+body {
+    background-color: #000;
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+h1, h2, h3, h4, h5, h6, span, p {
+    color: #fff;
+} 
+.navbar-dark {
+    background-color: transparent  !important;
+}
+
+.home {
+    background: url("../images/christiano.901de0c9ac85.jpg") fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+h1 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2rem;
+}
+img {
+    position: absolute;
+    left: 0;
+    max-width: 4%;
+}
+th, td {
+    color: #fff;
+}
+
+a, a:active, a:focus {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+a:hover {
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+    font-weight: 700;
+}
+
+.about, .contact {
+    border-bottom: solid .5px #fff;
+}
+footer {
+    bottom: 0;
+    height: 50px;
+}
+
+@media (max-width: 767px) {
+    .home {
+        background: url("../images/beckham.8309d8bbab89.jpg") no-repeat center center fixed;
+        background-color: black;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover ;
+    }
+    h1.heading {
+        margin-top: 1rem !important;
+    }
+    img {
+       position: relative;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    
+}
