@@ -12,8 +12,8 @@ ROUND_CHOICES = [
 ]
 
 class Team(models.Model):
-    name = models.TextField(blank=False)
-    collge = models.TextField()
+    name = models.CharField(max_length=120, blank=False)
+    college = models.TextField()
 
     def __str__(self):
         return self.name
