@@ -1,0 +1,80 @@
+{% extends 'base.html ' %}
+{% block content %}
+
+<div class="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <img src="/static/images/sarang.jpg" class="img-fluid mt-3" style="max-width: 8%;">
+        <h1 class="mt-5 heading">Sarang Memorial Floodlight Tournament</h1>
+        <h3 class=" mt-5 heading">Live Match - {{ cm.round }}</h3>
+          <table class="mx-auto mt-5">
+            <tr>
+              <td style="width: 45%;"><h1 class="scoret">{{ cm.t1 }}</h1></td>
+              <td style="width: 10%;"><h1 class="scoret">vs</h1></td>
+              <td style="width: 45%;"><h1 class="scoret">{{ cm.t2 }}</h1></td>
+            </tr>
+            <tr>
+              <td> <h1 class="score">{{ g_1 }}</h1></td>
+              <td><h1 class="score">-</h1></td>
+              <td><h1 class="score">{{ g_2 }}</h1></td>
+            </tr>
+            <tr>
+              <td>
+                {% if g_1 > 0 %}
+                  <span><strong>Scorers</strong> </span><br>
+                  {% for p in tm_1 %}
+                    <span>{{p}} {% if p.goal > 1 %} ({{p.goal}}) {% endif %}</span><br>
+                  {% endfor %}
+                {% endif %}
+              </td>
+              <td></td>
+              <td>
+                {% if g_2 > 0 %}
+                <span><strong>Scorers</strong> </span><br>
+                  {% for p in tm_2 %}
+                    <span>{{p}} {% if p.goal > 1 %} ({{p.goal}}) {% endif %}</span><br>
+                  {% endfor %}
+                {% endif %}
+              </td>
+            </tr>
+          </table>
+            <br>
+            <h3>Next Match - {{ nm.round }}<br><br>
+            {{ nm.t1 }} VS {{ nm.t2 }}</h3>
+
+          <button class="btn btn-primary mt-2 mb-5" onclick="location.reload();">Refresh Score</button>&nbsp;&nbsp;&nbsp;
+          <a href="./results/"> <button class="btn btn-primary mt-2 mb-5">Past Results</button></a>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="about">
+  <div class="container text-center mt-5 mb-5 p-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>About Sarang Memorial</h2>
+          <p>
+            Sarang memorial flood light tournament is an annual competition held in memory of Sarang, a second year mechanical student (2014-18) who had an untimely farewell due to an accident.<br><br>
+He was a football enthusiast who had an immense passion for the game. This event serves as a memory of him.
+This tournament boast about 30 teams every year vying for the prestigious cup.
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contact">
+  <div class="container text-center mt-5 mb-5 p-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Contact us</h2>
+          <p>
+            Midhun : 9605719874<br>
+            Faris : 9605489493<br>
+            Janshar : 9447422761 </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

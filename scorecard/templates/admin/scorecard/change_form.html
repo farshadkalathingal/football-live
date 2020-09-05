@@ -1,0 +1,24 @@
+{% extends "admin/change_form.html" %}
+{% block extrahead %}
+
+{{ block.super }} 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script type="text/javascript" charset="utf-8"> 
+        $(function(){ 
+            // inspect html to check id of category select dropdown.
+            $(document).on('change', "select#id_match", function(){ 
+                $.getJSON("/getSubcategory/",{match: $(this).val()}, function(j){ 
+                   $("select#id_team option").each(function()
+                        {
+                            if ((j[0].t1 == $(this).val()) || (j[0].t2 == $(this).val()) || ($(this).val() == '')) {
+                                $(this).show();
+
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                 }); 
+             }); 
+         }); 
+    </script>
+{% endblock %}
